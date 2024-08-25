@@ -1,0 +1,61 @@
+body{
+  font-family: arial;
+}
+.todoName,  .dueDate, .addTodo {
+  width:200px;
+  padding: 10px;
+}
+
+.addTodo {
+  width: 100px;
+  height: 42px;
+  padding: 12px;
+  border-style: none;
+  background-color: rgb(95, 226, 43);
+}
+
+.todoList{
+  display:grid;
+  grid-template-columns: 230px 228px 100px; 
+  margin-top: 10px;
+  
+  
+}
+
+.todoList > button{
+  max-width: 100px;
+  height: 42px;
+  padding: 12px;
+  border-style: none;
+  background-color:darkred;
+  color: white;
+}
+
+@media (max-width: 600px) {
+ .todoList {
+  display: flex;
+  gap: 3.5rem;
+ }
+ .todoList > button{
+  width: 100px;
+ }
+ .container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom:20px;
+  
+ }
+
+ .container > .addTodo{
+ 
+  width: 320px;
+ }
+ .todoName, .dueDate{
+  width: 297px;
+ }
+}
+
+
+
+
