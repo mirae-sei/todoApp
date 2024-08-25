@@ -34,7 +34,7 @@ body{
 @media (max-width: 600px) {
  .todoList {
   display: flex;
-  gap: 3.5rem;
+  gap: 3rem;
  }
  .todoList > button{
   width: 100px;
