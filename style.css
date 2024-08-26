@@ -1,5 +1,10 @@
+ *{
+  padding: 0;
+  margin: 0;
+ }
+
   body{
-    background-color: violet;
+    background-color: green;
     font-family: arial;
     display: flex;
     flex-direction: column;
@@ -12,40 +17,28 @@
   }
 
   .addTodo {
-    width: 100px;
+    width: 100%;
     height: 42px;
     padding: 12px;
     border-style: none;
     background-color: rgb(95, 226, 43);
   }
 
-  .todoList{
-    display:grid;
-
-    grid-template-columns: 230px 228px 100px; 
-    margin-top: 1rem;
-    column-gap: 0.2rem;
-    
-    
+  .container > input {
+    padding-right: 0px;
+    min-width: 97%;
+    align-self: center;
   }
-
-  .showTodo{
-    display: flex;
-    flex-direction: column;
-    margin: 0px 2vh 0px 2vh;
-    flex-wrap: wrap;
-    column-gap: 1px;
-  }
-
-
 
   .todoList > button{
-    max-width: 100px;
+    align-self: flex-start;
+    max-width: 100%;
     height: 42px;
     padding: 12px;
     border-style: none;
     background-color:darkred;
     color: white;
+   
   }
 
   .todoList :first-child {
@@ -54,47 +47,92 @@
 
   }
 
-  .todoList > p {
-    margin: 0px;
+  .todoList :nth-child(2){
+    align-self: start;
+   
   }
 
-  .container{
-    display: flex;
-    column-gap: 0.5rem;
-  }
-
-  .showTodo > p{
-    word-wrap: break-word;
-    text-align: justify;
-
-  }
-
-  @media (max-width: 600px) {
-  .todoList {
-    display: flex;
-    gap: 3rem;
-  }
   .todoList > button{
-    width: 100px;
+    align-self: flex-end;
   }
-  .container{
+
+
+
+
+/*layout*/
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 40%;
+}
+.showTodo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 40%;
+  margin: 0.7rem 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*for mobile*/
+
+@media (max-width: 600px) {
+  .todoList{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom:20px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 90%;
+    margin: 10%;
+  }
+
+  .todoList > button{
+    align-self: flex-end;
+   
+    height: 42px;
+    padding: 12px;
+    border-style: none;
+    background-color:darkred;
+    color: white;
+   
+  }
+
+  .todoList > :nth-child(2){
+    align-self: flex-end;
+    
     
   }
 
-  .container > .addTodo{
-  
-    width: 320px;
-  }
-  .todoName, .dueDate{
-    width: 297px;
-
-  }
+  .todoList > :nth-child(1){
+   
+   
+    
+    
   }
 
 
 
 
+}
