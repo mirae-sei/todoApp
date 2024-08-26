@@ -34,7 +34,7 @@ function rendertoDoList (){
 
       }else{
       
-      const html = `<div class = 'todoList'><p>${todoName}</p><p> ${dueDate}</p> <button class= 'remove' onclick = 'todoList.splice(${i} ,1) ; rendertoDoList() ; '>remove</button></div> `;
+      const html = `<div class = 'todoList'><p><B>Do this :</b><br>${todoName}</p><p><b>Due Date:</b> ${dueDate}</p> <button class= 'remove' onclick = 'todoList.splice(${i} ,1) ; rendertoDoList() ; '>Remove</button></div> `;
       toDoHTML += html ;
       }
      
