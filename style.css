@@ -1,5 +1,5 @@
   body{
-    background-color: lightgreen;
+    background-color: violet;
     font-family: arial;
     display: flex;
     flex-direction: column;
@@ -61,6 +61,12 @@
   .container{
     display: flex;
     column-gap: 0.5rem;
+  }
+
+  .showTodo > p{
+    word-wrap: break-word;
+    text-align: justify;
+
   }
 
   @media (max-width: 600px) {
