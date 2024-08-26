@@ -1,5 +1,9 @@
 body{
   font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .todoName,  .dueDate, .addTodo {
   width:200px;
@@ -16,11 +20,22 @@ body{
 
 .todoList{
   display:grid;
+
   grid-template-columns: 230px 228px 100px; 
-  margin-top: 10px;
+  margin-top: 1rem;
+  column-gap: 0.2rem;
   
   
 }
+
+.showTodo{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 2vh 0px 2vh;
+  column-gap: 1px;
+}
+
+
 
 .todoList > button{
   max-width: 100px;
@@ -31,10 +46,25 @@ body{
   color: white;
 }
 
+.todoList :first-child {
+  word-wrap: break-word;
+  text-align: justify;
+
+}
+
+.todoList > p {
+  margin: 0px;
+}
+
+.container{
+display: flex;
+  column-gap: 0.5rem;
+}
+
 @media (max-width: 600px) {
  .todoList {
   display: flex;
-  gap: 3.5rem;
+  gap: 3rem;
  }
  .todoList > button{
   width: 100px;
@@ -53,6 +83,7 @@ body{
  }
  .todoName, .dueDate{
   width: 297px;
+
  }
 }
 
