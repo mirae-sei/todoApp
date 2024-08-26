@@ -1,4 +1,5 @@
 body{
+  background-color: pink ;
   font-family: arial;
   display: flex;
   flex-direction: column;
